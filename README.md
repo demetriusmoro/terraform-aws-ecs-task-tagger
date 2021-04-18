@@ -20,7 +20,7 @@ The only required value is the `cluster_name`, to identify for wich cluster the 
 ```hcl
 module "ecs_task_tagger" {
   source       = "demetriusmoro/ecs-task-tagger/aws"
-  version      = "0.0.1"
+  version      = "0.0.2"
   cluster_name = "my-existing-ecs-cluster-name"
   # optionally insert tags variable to tag the resources created by this module
 }
