@@ -3,7 +3,12 @@ resource "aws_cloudwatch_event_rule" "ecs_task_tagger_lambda_rule" {
   name       = local.event_rule_name
   is_enabled = true
   event_pattern = templatefile("${path.module}/assets/eventbridge_rule_event_pattern.json", {
-    cluster_arn = data.aws_ecs_cluster.ecs_cluster.arn
+    cluster_arn = format(
+      "arn:aws:ecs:%s:%s:cluster/%s",
+      data.aws_region.current.name,
+      data.aws_caller_identity.current.account_id,
+      var.cluster_name
+    )
   })
 
   tags = merge(var.tags, {
