@@ -1,0 +1,17 @@
+# ide
+**/.idea/
+.vscode
+
+# lambda test, build, debug, deploy
+**/__pycache__
+**/.deploy/
+
+# local cache
+**/.terraform/*
+
+# tfstate
+*.tfstate
+*.tfstate.*
+
+# error log
+crash.log
