@@ -2,7 +2,7 @@
 
 [![Maintained by Demetrius Moro](https://img.shields.io/badge/maintained%20by-demetriusmoro-blue)](https://github.com/demetriusmoro) [![Module Version](https://img.shields.io/github/v/tag/demetriusmoro/terraform-aws-ecs-task-tagger?label=version&sort=semver)](https://registry.terraform.io/modules/demetriusmoro/ecs-task-tagger/aws/latest)
 
-This repo contains a [Terraform](https://terraform.io) [Module](https://www.terraform.io/docs/language/modules/index.html) for tagging single ECS-tasks based on their task definition, since it not supported natively by AWS.
+This repo contains a [Terraform](https://terraform.io) [Module](https://www.terraform.io/docs/language/modules/index.html) for tagging single ECS-tasks based on their task definition, since it is not supported natively by AWS.
 
 Tasks created by an ECS-service can use the `propagate_tags` property to copy tags to them automatically. Tasks **triggered by ECS-external events** like EventBridge schedules or custom events are created without tags, and that's the **use-case covered by this implementation**.
 
@@ -20,7 +20,7 @@ The only required value is the `cluster_name`, to identify for wich cluster the 
 ```hcl
 module "ecs_task_tagger" {
   source       = "demetriusmoro/ecs-task-tagger/aws"
-  version      = "0.0.4"
+  version      = "0.0.6"
   cluster_name = "my-existing-ecs-cluster-name"
   # optionally insert tags variable to tag the resources created by this module
 }
