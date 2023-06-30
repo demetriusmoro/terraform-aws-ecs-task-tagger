@@ -15,12 +15,12 @@ It creates:
 
 ## Usage
 
-The only required value is the `cluster_name`, to identify for wich cluster the automation shall be created.
+The only required value is the `cluster_name`, to identify for which cluster the automation shall be created.
 
 ```hcl
 module "ecs_task_tagger" {
   source       = "demetriusmoro/ecs-task-tagger/aws"
-  version      = "0.0.6"
+  version      = "0.1.0"
   cluster_name = "my-existing-ecs-cluster-name"
   # optionally insert tags variable to tag the resources created by this module
 }

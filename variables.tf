@@ -1,7 +1,7 @@
-# needed to identify for wich cluster the automation should be created
+# needed to identify for which cluster the automation should be created
 variable "cluster_name" {
   type        = string
-  description = "The name of the ECS cluster on wich the automation will be bound."
+  description = "The name of the ECS cluster on which the automation will be bound."
 }
 
 variable "tags" {
