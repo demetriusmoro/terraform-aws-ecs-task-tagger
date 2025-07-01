@@ -9,7 +9,7 @@ Tasks created by an ECS-service can use the `propagate_tags` property to copy ta
 It creates:
 
 1. A Lambda Function to copy the tags from the task definition to the task being launched *(and the needed IAM role)*.
-1. An EventBridge rule to invoke the lambda function. It gets triggered every time a task from the given *ECS Cluster* reaches the `PENDING` status, which occurs before `RUNNING` - read more about [ECS Tasks Lifecycle](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-lifecycle.html).
+1. An EventBridge rule to invoke the lambda function. It gets triggered every time a task from the given *ECS Cluster* reaches the `PENDING` status, which occurs before `RUNNING` - read more about [ECS Tasks Lifecycle](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task-lifecycle-explanation.html).
 
 ---
 
